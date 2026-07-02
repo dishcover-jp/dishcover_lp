@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dishcoverをダウンロード</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="../favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+<script>
+  // Redirect mobile devices straight to their store. PC stays on this page (shows badges).
+  (function(){
+    var IOS_APP_URL = 'https://apps.apple.com/app/id6761677783';
+    var ANDROID_APP_URL = 'https://play.google.com/store/apps/details?id=jp.dishcover.app';
+    var ua = navigator.userAgent || navigator.vendor || window.opera || '';
+    var isIOS = /iPad|iPhone|iPod/.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+    var isAndroid = /Android/.test(ua);
+    if (isIOS) { window.location.replace(IOS_APP_URL); }
+    else if (isAndroid) { window.location.replace(ANDROID_APP_URL); }
+  })();
+</script>
+<style>
+:root{color-scheme:dark;--bg:radial-gradient(1200px 700px at 80% -5%, rgba(75,180,130,0.30), transparent 60%), linear-gradient(180deg, #0a4530 0%, #14613e 22%, #1f7c50 48%, #166040 74%, #0c4a34 100%);--text:#ffffff;--text2:rgba(255,255,255,.74);}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Noto Sans JP',sans-serif;background:var(--bg);background-attachment:fixed;color:var(--text);min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px;-webkit-font-smoothing:antialiased;}
+.card{max-width:440px;text-align:center;}
+.logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:22px;margin-bottom:28px;letter-spacing:-.02em;}
+h1{font-size:clamp(24px,5vw,30px);font-weight:700;letter-spacing:-.02em;margin-bottom:12px;}
+p{font-size:15px;color:var(--text2);line-height:1.8;margin-bottom:30px;}
+.badges{display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;}
+.badge-link{display:inline-flex;line-height:0;}
+.badge-link img{display:block;height:48px;width:auto;}
+</style>
+</head>
+<body>
+  <main class="card">
+    <div class="logo">Dishcover</div>
+    <h1>Dishcoverをダウンロード</h1>
+    <p>お使いの端末に合わせて、アプリストアへ移動します。<br>移動しない場合は、下のボタンからお進みください。</p>
+    <div class="badges" aria-label="アプリストアへのリンク">
+      <a class="badge-link" href="https://apps.apple.com/app/id6761677783" aria-label="App StoreでDishcoverをダウンロード"><img src="../assets/badge-appstore-trim.png" alt="App Storeからダウンロード" height="48"></a>
+      <a class="badge-link" href="https://play.google.com/store/apps/details?id=jp.dishcover.app" aria-label="Google PlayでDishcoverをダウンロード"><img src="../assets/badge-googleplay-trim.png" alt="Google Playで手に入れよう" height="48"></a>
+    </div>
+  </main>
+</body></html>
