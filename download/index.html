@@ -8,6 +8,21 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+<!-- ===== Meta Pixel : base code ===== -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1683698942934009');   // ← index.html と同じピクセルIDに差し替え
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1683698942934009&ev=PageView&noscript=1"/></noscript>
 <script>
   // Redirect mobile devices straight to their store. PC stays on this page (shows badges).
   (function(){
@@ -16,8 +31,22 @@
     var ua = navigator.userAgent || navigator.vendor || window.opera || '';
     var isIOS = /iPad|iPhone|iPod/.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
     var isAndroid = /Android/.test(ua);
-    if (isIOS) { window.location.replace(IOS_APP_URL); }
-    else if (isAndroid) { window.location.replace(ANDROID_APP_URL); }
+    var dest = isIOS ? IOS_APP_URL : isAndroid ? ANDROID_APP_URL : null;
+    if (!dest) return;  // PC はリダイレクトせずバッジ表示のまま
+
+    var platform = isIOS ? 'ios' : 'android';
+    var go = function(){ window.location.replace(dest); };
+
+    // Pixel 送信を挟んでから遷移。送信完了(eventID callback)か、最大 700ms で必ず遷移する
+    if (window.fbq) {
+      var jumped = false;
+      var once = function(){ if (jumped) return; jumped = true; go(); };
+      fbq('trackCustom', 'StoreClick', { platform: platform, source: 'download_auto' }, { eventID: 'auto_' + Date.now() });
+      setTimeout(once, 700);   // 保険：計測が詰まっても 700ms で必ずストアへ
+      // fbevents は送信をベストエフォートで行うため、ここでは時間ベースで確実に遷移させる
+    } else {
+      go();
+    }
   })();
 </script>
 <style>
@@ -43,4 +72,18 @@ p{font-size:15px;color:var(--text2);line-height:1.8;margin-bottom:30px;}
       <a class="badge-link" href="https://play.google.com/store/apps/details?id=jp.dishcover.app" aria-label="Google PlayでDishcoverをダウンロード"><img src="../assets/badge-googleplay-trim.png" alt="Google Playで手に入れよう" height="48"></a>
     </div>
   </main>
+  <!-- ===== Store-badge click tracking (PC / non-redirect) ===== -->
+  <script>
+    document.addEventListener('click', function (e) {
+      var a = e.target.closest('a.badge-link');
+      if (!a) return;
+      var href = a.getAttribute('href') || '';
+      var platform = href.indexOf('apps.apple.com') > -1 ? 'ios'
+                   : href.indexOf('play.google.com') > -1 ? 'android'
+                   : 'other';
+      if (window.fbq) {
+        fbq('trackCustom', 'StoreClick', { platform: platform, source: 'download_badge' });
+      }
+    }, true);
+  </script>
 </body></html>

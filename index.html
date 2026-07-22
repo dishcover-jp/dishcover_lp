@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja"><head>
 <meta charset="UTF-8">
+<meta name="facebook-domain-verification" content="tnxk6fxmhl5fqzxq29kn7em42aedzr" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Dishcover（ディシュカバー）｜口コミ不要で、好みのお店探し</title>
 <meta name="description" content="Dishcoverは、行ったお店を口コミなしで簡単に記録しながら、自分の好みに合いそうなお店を見つけやすくするグルメアプリです。4段階評価、Dishcoverスコア、地図、おすすめフィードで、みんなの高評価だけでは分からない自分好みのお店探しをサポートします。">
@@ -71,6 +72,35 @@
     html{scroll-behavior:auto}
   }
 </style>
+<!-- ===== Meta Pixel : base code ===== -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1683698942934009');   // ← 発行したピクセルIDに差し替え
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1683698942934009&ev=PageView&noscript=1"/></noscript>
+<!-- ===== Store-badge click tracking (event delegation) ===== -->
+<script>
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest('a.store-badge');
+    if (!a) return;
+    var href = a.getAttribute('href') || '';
+    var platform = href.indexOf('apps.apple.com') > -1 ? 'ios'
+                 : href.indexOf('play.google.com') > -1 ? 'android'
+                 : 'other';
+    if (window.fbq) {
+      fbq('trackCustom', 'StoreClick', { platform: platform, source: 'lp' });
+    }
+  }, true);
+</script>
 </head>
 <body>
 <nav class="wrap" style="position: relative; z-index: 20; display: flex; align-items: center; justify-content: space-between; gap: 18px; padding: 20px 24px; max-width: 1120px; margin: 0px auto;">
