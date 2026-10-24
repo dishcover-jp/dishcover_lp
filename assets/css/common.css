@@ -1,0 +1,94 @@
+/* ==========================================================
+ Dishcover 共通スタイル（LP・更新情報・利用規約・プライバシーポリシー）
+ 色・フォント・基本の文字組み・ヘッダー・フッター・ボタンをここで管理する
+ ========================================================== */
+:root{
+  color-scheme:light only;
+  --green:#129c5e;        /* brand: decorative, large text, icons */
+  --green-btn:#0d7f4b;    /* buttons: 5.05:1 with white */
+  --green-ink:#0e7a49;    /* small green text: 5.4:1 on white */
+  --green-deep:#0c4a32;   /* dark panels */
+  --green-pale:#e6f4ec;
+  --green-tint:#f3f9f4;
+  --ink:#0f3527;
+  --ink-2:#4c7060;
+  --line:rgba(15,53,39,.12);
+  --paper:#fbfdfa;
+  --radius:22px;
+  --heading:'Zen Kaku Gothic New','Noto Sans JP',sans-serif;
+  --body:'Noto Sans JP',sans-serif;
+  --latin:'DM Sans','Noto Sans JP',sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;font-family:var(--body);color:var(--ink);background:var(--paper);line-height:1.75;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:var(--green-ink);text-decoration:none}
+h1,h2,h3,h4,h5{font-family:var(--heading);letter-spacing:-.015em;margin:0;font-feature-settings:"palt"}
+p{margin:0}
+.wrap{max-width:1120px;margin:0 auto;padding-left:24px;padding-right:24px}
+.sec{padding:88px 0}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-family:var(--latin);font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--green-ink)}
+.eyebrow::before{content:"";width:18px;height:2px;background:var(--green);border-radius:2px}
+.h2{font-size:38px;font-weight:900;line-height:1.3;margin-top:14px}
+.lead{font-size:17px;color:var(--ink);line-height:1.95;margin-top:18px}
+.store-badge{display:inline-flex;transition:transform .15s}
+.store-badge:hover{transform:translateY(-2px)}
+.store-badge:focus-visible{outline:2px solid var(--green);outline-offset:3px;border-radius:9px}
+.badges{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.badges img{height:48px;width:auto}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--green-btn);color:#fff;font-weight:700;font-size:14px;padding:12px 20px;border-radius:999px;box-shadow:0 8px 20px rgba(13,127,75,.26);transition:transform .15s,box-shadow .2s}
+.btn:hover{transform:translateY(-1px);box-shadow:0 12px 24px rgba(13,127,75,.32);color:#fff}
+.btn:focus-visible,a:focus-visible,summary:focus-visible{outline:2px solid var(--green);outline-offset:3px}
+.nb{white-space:nowrap}
+.sp-br{display:none}
+@media (max-width:600px){.sp-br{display:inline}}
+.pc-br{display:inline}
+@media (max-width:600px){.pc-br{display:none}}
+.xs-br{display:none}
+@media (max-width:400px){.xs-br{display:inline}}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s cubic-bezier(.22,1,.36,1),transform .7s cubic-bezier(.22,1,.36,1)}
+.reveal.in{opacity:1;transform:none}
+.d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}
+
+/* nav */
+.nav{position:relative;z-index:20;display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:18px;padding-bottom:18px}
+.brand{display:flex;align-items:center;gap:10px;font-family:var(--latin);font-weight:700;font-size:24px;letter-spacing:-.02em;color:var(--ink)}
+.brand img{width:38px;height:38px;border-radius:9px}
+
+footer{border-top:1px solid var(--line);padding:40px 0;background:rgba(255,255,255,.6)}
+.flinks{display:flex;justify-content:center;gap:26px;flex-wrap:wrap;margin-bottom:16px}
+.flinks a{font-size:14px;color:var(--ink);font-weight:500}
+.copy{font-size:12.5px;color:var(--ink-2);text-align:center}
+
+/* sub pages: page header */
+.page-head{max-width:880px;margin:0 auto;padding:40px 24px 26px}
+.page-head .h1{font-size:44px;font-weight:900;line-height:1.25;margin-top:14px;letter-spacing:-.02em}
+.page-head .lead{max-width:36em}
+.page-head .note{font-size:12.5px;color:var(--ink-2);line-height:1.75;max-width:44em;margin-top:12px}
+
+/* legal pages (terms / privacy) */
+.legal{max-width:880px;margin:0 auto;padding:0 24px 100px}
+.legal .meta{font-size:13px;color:var(--ink-2);margin-top:10px}
+.legal section{margin-top:34px}
+.legal h2{font-size:18px;font-weight:700;color:var(--ink);margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid var(--line)}
+.legal p{font-size:15px;color:var(--ink);line-height:1.95;margin-bottom:12px}
+.legal ol,.legal ul{margin:8px 0 12px;padding-left:1.4em}
+.legal li{font-size:15px;color:var(--ink);line-height:1.95;margin-bottom:6px}
+.legal ol ol,.legal ol ul{margin-top:6px}
+.legal a{text-decoration:underline}
+
+@media (max-width:560px){
+  .wrap{padding-left:18px;padding-right:18px}
+  footer{padding:30px 0}
+  .page-head{padding:28px 18px 20px}
+  .page-head .h1{font-size:32px}
+  .legal{padding:0 18px 80px}
+}
+@media (prefers-reduced-motion:reduce){
+  .reveal{opacity:1!important;transform:none!important;transition:none!important}
+  html{scroll-behavior:auto}
+  .store-badge,.btn{transition:none}
+}

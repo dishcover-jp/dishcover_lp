@@ -2,36 +2,29 @@
 <html lang="ja"><head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light only">
 <title>プライバシーポリシー｜Dishcover</title>
 <meta name="robots" content="noindex">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
-<style>
-:root{color-scheme:light;--bg:radial-gradient(1100px 620px at 85% -6%, rgba(24,160,100,.12), transparent 62%), linear-gradient(180deg, #fcfdfa 0%, #f6faf3 45%, #eff7ef 100%);--text:#0f3527;--text2:rgba(15,53,39,.82);--line:rgba(15,53,39,.12);--accent:#129c5e;}
-*{margin:0;padding:0;box-sizing:border-box;}
-body{font-family:'Noto Sans JP',sans-serif;background:var(--bg);background-attachment:fixed;color:var(--text);line-height:1.95;-webkit-font-smoothing:antialiased;min-height:100vh;}
-.lnav{max-width:820px;margin:0 auto;padding:22px 24px;display:flex;align-items:center;justify-content:space-between;}
-.lnav a.logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:21px;color:var(--text);text-decoration:none;letter-spacing:-.02em;}
-.lnav a.back{font-size:13px;font-weight:700;color:var(--accent);text-decoration:none;}
-.lwrap{max-width:820px;margin:0 auto;padding:24px 24px 100px;}
-h1{font-size:clamp(26px,4vw,36px);font-weight:700;letter-spacing:-.02em;margin-bottom:8px;}
-.meta{font-size:13px;color:var(--text2);margin-bottom:40px;}
-.lwrap section{margin-bottom:30px;}
-h2{font-size:17px;font-weight:700;color:var(--accent);margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid var(--line);}
-p{font-size:15px;color:var(--text2);margin-bottom:12px;}
-ol,ul{margin:8px 0 12px;padding-left:1.4em;}
-li{font-size:15px;color:var(--text2);margin-bottom:8px;}
-ol ol,ol ul{margin-top:8px;}
-.lfoot{border-top:1px solid var(--line);max-width:820px;margin:0 auto;padding:24px;font-size:12.5px;color:var(--text2);display:flex;gap:18px;flex-wrap:wrap;}
-.lfoot a{color:var(--text2);}
-</style>
+<link rel="icon" href="favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500;700;900&family=Noto+Sans+JP:wght@400;500;700&family=DM+Sans:ital,opsz,wght@0,9..40,500;0,9..40,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/common.css">
 </head>
 <body>
-<nav class="lnav"><a class="logo" href="index.html">Dishcover</a><a class="back" href="index.html">← トップへ戻る</a></nav>
-<main class="lwrap">
-  <h1>プライバシーポリシー</h1>
-  <p class="meta">2026年3月13日 制定</p>
+<nav class="wrap nav" aria-label="グローバル">
+  <a class="brand" href="index.html" aria-label="Dishcover トップ"><img src="assets/logo-icon.png" alt="" width="38" height="38">Dishcover</a>
+  <a href="index.html#download" class="btn">無料でダウンロード</a>
+</nav>
+
+<header class="page-head">
+  <span class="eyebrow">Privacy Policy</span>
+  <h1 class="h1">プライバシーポリシー</h1>
+  <p class="note">2026年3月13日 制定</p>
+</header>
+<main class="legal">
 
   <section>
     <h2>1. 事業者</h2>
@@ -120,12 +113,12 @@ ol ol,ol ul{margin-top:8px;}
   </section>
   <section>
     <h2>7. 保存期間・削除（アカウント削除）</h2>
-    <p>ビジネス上/法的必要がある期間に限り保持します。詳しくは<a href="terms.html" style="color:var(--accent);">利用規約 第6条（アカウント削除）</a>を参照ください。</p>
+    <p>ビジネス上/法的必要がある期間に限り保持します。詳しくは<a href="terms.html">利用規約 第6条（アカウント削除）</a>を参照ください。</p>
   </section>
   <section>
     <h2>8. 利用者の権利・問い合わせ</h2>
     <p>利用者は、当社所定の方法により、自己の情報に関する開示・訂正・削除等を求めることができます。お問い合わせは以下までお願いします。</p>
-    <p>Dishcover株式会社 カスタマーサポート<br>メールアドレス：<a href="mailto:support@dishcover.jp" style="color:var(--accent);">support@dishcover.jp</a></p>
+    <p>Dishcover株式会社 カスタマーサポート<br>メールアドレス：<a href="mailto:support@dishcover.jp">support@dishcover.jp</a></p>
   </section>
   <section>
     <h2>9. 安全管理措置</h2>
@@ -136,9 +129,10 @@ ol ol,ol ul{margin-top:8px;}
     <p>当社は、本ポリシーを必要に応じて改定することがあります。重要な変更がある場合は、本サービス上で告知します。</p>
   </section>
 </main>
-<footer class="lfoot">
-  <span>© 2026 Dishcover株式会社</span>
-  <a href="terms.html">利用規約</a>
-  <a href="index.html">トップへ戻る</a>
+<footer>
+  <div class="wrap">
+    <div class="flinks"><a href="index.html">トップ</a><a href="updates.html">更新情報</a><a href="terms.html">利用規約</a><a href="privacy.html">プライバシーポリシー</a></div>
+    <p class="copy">© 2026 Dishcover株式会社</p>
+  </div>
 </footer>
 </body></html>
