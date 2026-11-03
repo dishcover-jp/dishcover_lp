@@ -1,0 +1,63 @@
+/* Three-step overview using the same illustrative screens and restaurant data. */
+.how-section{padding-top:50px;padding-bottom:64px;border-top:1px solid #dce5da}
+.how-eyebrow{display:flex;align-items:center;gap:10px;font-size:11px;letter-spacing:.17em}
+.how-eyebrow:before{content:'';width:18px;height:2px;background:#488563}
+.how-section>h2{font-size:36px;line-height:1.45;font-weight:900;letter-spacing:-.035em;margin:14px 0 32px}
+.steps-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;list-style:none;padding:0;margin:0}
+.step-card{min-width:0;background:#fff;border:1px solid #d8e2d9;border-radius:22px;padding:24px 20px 22px;display:flex;flex-direction:column;overflow:hidden}
+.step-card:before{content:none}
+.step-copy{min-height:165px}
+.step-label{color:#347451;font-size:12px;font-weight:700;letter-spacing:.13em;font-family:var(--latin)}
+.step-copy h3{font-size:22px;line-height:1.45;font-weight:900;letter-spacing:-.035em;margin:12px 0 10px}
+.step-copy>p{font-size:14px;line-height:1.9;color:var(--ink-2);margin:0}
+.step-copy>.step-note{font-size:11px;line-height:1.7;margin-top:10px;color:#63786c}
+.step-media{min-height:380px;display:flex;align-items:center;justify-content:center;flex:1;margin-top:10px;min-width:0}
+.step-media .record-visual{background:none;padding:0;margin:0;width:100%;max-width:280px}
+.step-media .record-mock{padding:18px 14px;border-color:#bacdc0;border-radius:17px;box-shadow:0 10px 25px #173d2710}
+.record-nearby{font-size:9px;color:#647f6e;margin-bottom:8px;display:flex;align-items:center;gap:4px}
+.record-nearby>span{font-size:14px}
+.step-media .record-mock-title{font-size:17px;margin-bottom:20px}
+.step-media .record-mock-label{margin-top:15px}
+.step-media .record-mock-button{margin-top:20px}
+.step-media .phone-figure{width:100%;max-width:330px}
+.step-media .drag-floater{width:80px}
+.step-media .drag-floater .sample-name{font-size:9px}
+.step-media .sample-drag .sample-name{font-size:8px;height:25px}
+.step-media .sample-drag .sample-station{font-size:7px}
+.step-media .sample-drag .sample-destination{min-height:72px}
+.step-media .share-visual{width:100%;max-width:330px;transform:none}
+.step-media .share-range-label{font-size:11px;gap:8px;margin-bottom:12px}
+.step-media .share-paper{padding:8px;box-shadow:5px 9px 0 #e6ece2}
+.step-media .sample-share .sample-title{font-size:12px;padding:10px 7px}
+.step-media .sample-share .sample-title>span{font-size:8px}
+.step-media .sample-share .sample-items{gap:3px;padding:3px}
+.step-media .sample-share .sample-band>b{font-size:22px}
+.step-media .sample-share .sample-band>span{font-size:7px}
+.step-media .sample-share .sample-name{font-size:7px;height:24px;padding:3px 2px 0}
+.step-media .sample-share .sample-station{font-size:6px;padding:1px 2px 3px}
+.step-media .share-paper-foot{font-size:10px;padding-top:13px}
+@media(max-width:1050px) and (min-width:901px){.step-card{padding:22px 15px 20px}.step-copy{min-height:185px}.step-copy h3{font-size:20px}.step-copy>p{font-size:13px}}
+@media(max-width:900px){.steps-grid{grid-template-columns:1fr;max-width:490px;margin:0 auto;gap:22px}.how-section>h2{font-size:32px}.step-card{padding:25px}.step-copy{min-height:0}.step-media{min-height:0;margin-top:26px}.step-media .share-visual{max-width:350px}.step-media .phone-figure{max-width:350px}.step-media .record-visual{max-width:300px}}
+@media(max-width:650px){.how-section{padding-top:34px;padding-bottom:38px}.how-section>h2{font-size:28px;margin:13px 0 24px}.step-card{padding:22px 18px;border-radius:20px}.step-copy h3{font-size:22px}.step-copy>p{font-size:14px}.step-copy>.step-note{font-size:11px}.step-media{margin-top:24px}.step-media .record-visual{max-width:280px}.step-media .sample-drag .sample-destination{min-height:66px}}
+@media(max-width:360px){.how-section>h2{font-size:25px}.step-card{padding:20px 15px}.step-copy h3{font-size:20px}.step-copy>p{font-size:13px}.step-media .record-mock{padding:16px 12px}.step-media .unclassified-strip{padding:7px;gap:6px;margin-left:7px;margin-right:7px}.step-media .unclassified-strip>b{font-size:10px}.step-media .sample-drag .sample-items{gap:3px;padding:3px}.step-media .sample-drag .sample-name{font-size:7px}.step-media .sample-drag .sample-station{font-size:6px}.step-media .drag-floater{left:33%;width:75px}}
+
+/* Actual app screens, preserving the surrounding layout and image proportions. */
+.tier-hero-image{display:block;width:100%;height:auto;border-radius:9px;box-shadow:10px 20px 35px #103b2418}
+.tier-decide-image{display:block;width:auto;height:auto;max-width:100%;max-height:430px;margin:auto;border:1px solid #cfdbd0;border-radius:14px;box-shadow:0 18px 32px #133c2c14}
+.tier-share-image{display:block;width:100%;height:auto;border-radius:8px}
+@media(min-width:901px){.tier-hero-image{width:auto;max-width:100%;max-height:580px;margin:auto}}
+@media(max-width:900px){.tier-decide-image{width:100%;max-height:none}}
+
+.record-actual-image{display:block;width:100%;height:auto;border:1px solid #bacdc0;border-radius:17px;box-shadow:0 10px 25px #173d2710}
+
+/* A shared Tier image as a reply, without app-specific chat branding. */
+.tier-chat{display:flex;flex-direction:column;gap:16px;width:100%;max-width:350px;margin:0;padding:14px;background:#edf2ee;border:1px solid #dce5dd;border-radius:18px}
+.tier-chat-message{align-self:flex-start;max-width:100%;margin:0;padding:10px 13px;background:#fff;border:1px solid #e1e8e2;border-radius:14px 14px 14px 4px;color:#244235;font-size:14px;line-height:1.7;box-shadow:0 2px 5px #183d2c06}
+.tier-chat-reply{align-self:flex-end;width:85%;min-width:0;margin-left:auto;margin-right:0}
+.tier-chat-reply .tier-share-image{border-radius:12px;box-shadow:0 4px 12px #173d2714}
+
+/* In the three-column layout, keep each illustration directly after its copy. */
+@media(min-width:901px){
+  .step-copy{min-height:0}
+  .step-media{flex:0 0 auto;min-height:0;align-items:flex-start;margin-top:24px}
+}

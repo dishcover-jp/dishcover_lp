@@ -5,31 +5,34 @@
 <meta name="facebook-domain-verification" content="tnxk6fxmhl5fqzxq29kn7em42aedzr" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="color-scheme" content="light only">
-<title>Dishcover（ディシュカバー）｜あの店が好きなら、この店も。</title>
-<meta name="description" content="Dishcoverは、食べて気に入った店をもとに、あなたが好きそうな店を探して届ける無料のグルメアプリ。好きな店に似た店や、好みの方向が近い店が届くので、眺めているうちに行きたい店が増えていきます。関東の飲食店に対応。">
+<title>Dishcover｜食べたお店で、自分だけのTier表を。</title>
+<meta name="description" content="食べたお店を写真で記録して、自分だけの「好きなお店Tier」を作ろう。食べたお店を見比べてS〜Dに並べ、画像で保存・共有。口コミ不要の無料グルメ記録アプリ。関東の飲食店に対応。">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Dishcover（ディシュカバー）｜あの店が好きなら、この店も。">
-<meta property="og:description" content="Dishcoverは、食べて気に入った店をもとに、あなたが好きそうな店を探して届ける無料のグルメアプリ。好きな店に似た店や、好みの方向が近い店が届くので、眺めているうちに行きたい店が増えていきます。関東の飲食店に対応。">
-<meta property="og:image" content="https://dishcover.jp/assets/ogp-discover-20261023.jpg">
+<meta property="og:title" content="Dishcover｜食べたお店で、自分だけのTier表を。">
+<meta property="og:description" content="食べたお店を写真で記録して、自分だけの「好きなお店Tier」を作ろう。食べたお店を見比べてS〜Dに並べ、画像で保存・共有。口コミ不要の無料グルメ記録アプリ。関東の飲食店に対応。">
+<meta property="og:image" content="https://dishcover.jp/assets/ogp-tier-20261029.png">
 <meta property="og:url" content="https://dishcover.jp/">
 <link rel="canonical" href="https://dishcover.jp/">
 <meta property="og:site_name" content="Dishcover">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Dishcover（ディシュカバー）｜あの店が好きなら、この店も。">
-<meta name="twitter:description" content="Dishcoverは、食べて気に入った店をもとに、あなたが好きそうな店を探して届ける無料のグルメアプリ。好きな店に似た店や、好みの方向が近い店が届くので、眺めているうちに行きたい店が増えていきます。関東の飲食店に対応。">
-<meta name="twitter:image" content="https://dishcover.jp/assets/ogp-discover-20261023.jpg">
+<meta name="twitter:title" content="Dishcover｜食べたお店で、自分だけのTier表を。">
+<meta name="twitter:description" content="食べたお店を写真で記録して、自分だけの「好きなお店Tier」を作ろう。食べたお店を見比べてS〜Dに並べ、画像で保存・共有。口コミ不要の無料グルメ記録アプリ。関東の飲食店に対応。">
+<meta name="twitter:image" content="https://dishcover.jp/assets/ogp-tier-20261029.png">
 <link rel="icon" href="favicon.ico">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
 <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 <meta name="theme-color" content="#f6faf5">
-<script>document.documentElement.classList.add('js');</script>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500;700;900&family=Noto+Sans+JP:wght@400;500;700&family=DM+Sans:ital,opsz,wght@0,9..40,500;0,9..40,700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/common.css">
-<link rel="stylesheet" href="assets/css/lp.css">
+<link rel="stylesheet" href="assets/css/tier-lp.css">
+<link rel="stylesheet" href="assets/css/tier-samples.css">
+<link rel="stylesheet" href="assets/css/tier-steps.css">
 <!-- ===== Meta Pixel : base code ===== -->
 <script>
+  if (location.protocol !== 'file:' && !['localhost','127.0.0.1','::1'].includes(location.hostname)) {
   !function(f,b,e,v,n,t,s)
   {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
   n.callMethod.apply(n,arguments):n.queue.push(arguments)};
@@ -38,8 +41,9 @@
   t.src=v;s=b.getElementsByTagName(e)[0];
   s.parentNode.insertBefore(t,s)}(window, document,'script',
   'https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', '1683698942934009');   // ← 発行したピクセルIDに差し替え
+  fbq('init', '1683698942934009');
   fbq('track', 'PageView');
+  }
 </script>
 <noscript><img height="1" width="1" style="display:none"
   src="https://www.facebook.com/tr?id=1683698942934009&ev=PageView&noscript=1"/></noscript>
@@ -53,259 +57,37 @@
                  : href.indexOf('play.google.com') > -1 ? 'android'
                  : 'other';
     if (window.fbq) {
-      fbq('trackCustom', 'StoreClick', { platform: platform, source: 'lp' });
+      fbq('trackCustom', 'StoreClick', { platform: platform, source: 'lp', placement: a.dataset.placement || 'unknown', variant: 'tier_20261029' });
     }
   }, true);
 </script>
 </head>
 <body>
-
-<nav class="wrap nav" aria-label="グローバル">
-  <a class="brand" href="https://dishcover.jp/" aria-label="Dishcover トップ"><img src="assets/logo-icon.png" alt="" width="38" height="38">Dishcover</a>
-  <a href="#download" class="btn">無料でダウンロード</a>
-</nav>
-
-<!-- ===== HERO ===== -->
-<header class="hero">
-  <div class="wrap hero-grid">
-    <div>
-      <span class="hero-kicker reveal"><b>無料</b>関東の飲食店に対応</span>
-      <h1 class="h1 reveal d1"><span class="mk">あの店</span>が好きなら、<br>この店も。</h1>
-      <p class="hero-sub reveal d2">食べて気に入った店を、お気に入りに。<br>その店をもとに、<br class="xs-br"><strong>あなたが好きそうな店</strong>を<span class="nb">探して届けます。</span></p>
-      <div class="hero-cta badges reveal d3">
-        <a class="store-badge" href="https://apps.apple.com/jp/app/id6761677783" target="_blank" rel="noopener" aria-label="App Storeでダウンロード"><img src="assets/badge-appstore-trim.png" alt="App Store でダウンロード" width="160" height="48"></a>
-        <a class="store-badge" href="https://play.google.com/store/apps/details?id=jp.dishcover.app" target="_blank" rel="noopener" aria-label="Google Playで手に入れる"><img src="assets/badge-googleplay-trim.png" alt="Google Play で手に入れる" width="162" height="48"></a>
-      </div>
-    </div>
-
-    <div class="hero-visual reveal d2">
-      <!-- 発見タブの実スクリーンショット（2026/10/23撮影・撮影用の架空の店） -->
-      <div class="hero-art" role="img" aria-label="発見タブの画面。あなたのお気に入り「担々麺 紅蓮」から点線が伸び、「担々麺 紅蓮にとても似てる」のラベル付きで、店名・紹介文・料理写真・最寄り駅・予算が並ぶ">
-      <div class="fav-ticket" aria-hidden="true">
-        <div class="tk-head">あなたのお気に入り</div>
-        <div class="tk-body">
-          <div class="ph" style="--iw:400;--x:0;--y:0;--w:400;--h:400"><img src="assets/images/fav-guren-20261023.jpg" alt="" loading="eager" decoding="async"></div>
-          <div>
-            <div class="tk-name"><svg class="heart" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.6-9.3C.9 8.3 3 4.6 6.6 4.6c2 0 3.5 1.2 5.4 3.2 1.9-2 3.4-3.2 5.4-3.2 3.6 0 5.7 3.7 4.2 7.1C19.5 16.4 12 21 12 21z"/></svg>担々麺 紅蓮</div>
-            <div class="tk-sub">食べて、気に入った店</div>
-          </div>
-        </div>
-      </div>
-      <svg class="fav-link" aria-hidden="true"><path id="fav-path" d=""/><circle id="fav-dot" r="3.5" cx="-10" cy="-10"/></svg>
-      <div class="phone">
-        <div class="screen">
-          <span class="island" aria-hidden="true"></span>
-          <div class="sbar" aria-hidden="true"></div>
-          <div class="shotwrap" aria-hidden="true"><img src="assets/images/discover-feed-20261023.webp" alt="" loading="eager" decoding="async"><span class="lbl-hit" id="fav-target"></span></div>
-        </div>
-      </div>
-      </div>
-    </div>
-  </div>
-</header>
-
-<!-- ===== WHY ===== -->
-<section class="insight sec" aria-labelledby="insight-h">
-  <div class="wrap">
-    <div class="insight-head reveal">
-      <span class="eyebrow">Why Dishcover</span>
-      <h2 id="insight-h" class="h2">店との出会い方を、<br class="sp-br">変える。</h2>
-    </div>
-    <div class="why">
-      <div class="why-row why-solo reveal">
-        <div class="why-txt">
-          <span class="why-n">01</span>
-          <h3>行きたい店は、<br class="sp-br">偶然にしか増えない。</h3>
-          <p>SNSやテレビでたまたま見かけて、保存する。<br>行きたい店が増えるのは、そんなときくらい。<br>いざ「今日どこ行こう」となると、<br class="pc-br"><span class="nb">選ぶには全然足りない。</span></p>
-        </div>
-      </div>
-
-      <div class="why-row reveal">
-        <div class="why-txt">
-          <span class="why-n">02</span>
-          <h3>好きな店が、<br>次の行きたい店を<br class="sp-br">連れてくる。</h3>
-          <p>好きな店に似た店や、<span class="nb">好みの方向が近い店が届きます。</span><br>眺めているうちに、<span class="nb">行きたい店が増えていきます。</span></p>
-        </div>
-        <div class="why-art">
-          <div class="flow" role="img" aria-label="お気に入りの店「パンケーキ 朝凪」から矢印が伸び、発見タブに「パンケーキ 朝凪にとても似てる」「パンケーキ 朝凪好きに合いそう」のラベル付きで、店名・紹介文・写真が並ぶ">
-            <div class="fav-card" aria-hidden="true">
-              <div class="tk-head">あなたのお気に入り</div>
-              <span class="ph" style="--iw:400;--x:0;--y:0;--w:400;--h:400"><img src="assets/images/fav-asanagi-20261023.jpg" alt="" loading="lazy" decoding="async"></span>
-              <div>
-                <div class="tk-name"><svg class="heart" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.6-9.3C.9 8.3 3 4.6 6.6 4.6c2 0 3.5 1.2 5.4 3.2 1.9-2 3.4-3.2 5.4-3.2 3.6 0 5.7 3.7 4.2 7.1C19.5 16.4 12 21 12 21z"/></svg>パンケーキ 朝凪</div>
-                <div class="tk-sub">食べて、気に入った店</div>
-              </div>
-            </div>
-            <div class="flow-arrow" aria-hidden="true"><svg viewBox="0 0 30 30" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 15h21" stroke-dasharray="3 4"/><path d="M18 8l7 7-7 7"/></svg></div>
-            <div class="feedbox" aria-hidden="true">
-              <div class="fb-cards"><div class="fb-card"><img src="assets/images/why-card-hyuga-20261023.webp" alt="" loading="lazy" decoding="async"></div><div class="fb-card"><img src="assets/images/why-card-komorebi-20261023.webp" alt="" loading="lazy" decoding="async"></div></div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ===== STEPS ===== -->
-<section class="sec" id="how" aria-labelledby="how-h">
-  <div class="wrap">
-    <div class="reveal" style="max-width:720px">
-      <span class="eyebrow">How it works</span>
-      <h2 id="how-h" class="h2">使い方は、<br class="sp-br">3ステップ。</h2>
-    </div>
-    <div class="steps">
-      <article class="step reveal d1">
-        <span class="step-num">STEP 1</span>
-        <h3>食べたら、<br class="sp-br">記録する。</h3>
-        <p>写真を選ぶと、撮った場所から<span class="nb">店が候補に。</span><br class="sp-br"><span class="nb">採点・口コミは不要です。</span></p>
-        <div class="step-shot">
-          <div class="mini"><div class="mscr"><div class="chrome" aria-hidden="true"></div><div class="ph" style="--iw:1206;--x:0;--y:300;--w:1206;--h:1420"><img src="assets/images/record-suggest-20261023.webp" alt="記録画面。位置情報付きの写真を追加すると、撮った場所の近くの店が候補として並ぶ" loading="lazy" decoding="async"></div></div></div>
-        </div>
-      </article>
-      <article class="step reveal d2">
-        <span class="step-num">STEP 2</span>
-        <h3>好きな店は、<br class="sp-br"><span class="nb">お気に入りに。</span></h3>
-        <p>記録のときに、<span class="nb">スイッチをひとつ。</span></p>
-        <div class="step-shot">
-          <div class="mini"><div class="mscr"><div class="chrome" aria-hidden="true"></div><div class="ph" style="--iw:1206;--x:0;--y:950;--w:1206;--h:1420"><img src="assets/images/record-favorite-20261023.webp" alt="記録画面。食べたお店「パンケーキ 朝凪」を選び、「お気に入りのお店」のスイッチをオンにしている" loading="lazy" decoding="async"></div></div></div>
-        </div>
-      </article>
-      <article class="step reveal d3">
-        <span class="step-num">STEP 3</span>
-        <h3>あなた好みの店が、<span class="nb">届く。</span></h3>
-        <p>似ている店が、紹介文つきで<span class="nb">発見タブに。</span></p>
-        <div class="step-shot bot">
-          <div class="mini bot"><div class="mscr"><div class="ph" style="--iw:1206;--x:0;--y:1000;--w:1206;--h:1578"><img src="assets/images/discover-feed-20261023.webp" alt="画面下のタブバーで「発見」を開くと、お気に入りに似ている店がラベル付きで並ぶ" loading="lazy" decoding="async"></div><i class="tap" aria-hidden="true" style="left:39.5%;top:91.9%"></i></div></div>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- ===== COLLECTION ===== -->
-<section class="sec" id="record" aria-labelledby="col-h" style="background:var(--green-tint);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
-  <div class="wrap">
-    <div class="rec-row">
-      <div class="rec-text reveal">
-        <span class="eyebrow">Collection</span>
-        <h2 id="col-h" class="h2">記録は、<br>お店コレクションに。</h2>
-        <p class="lead">食べた店が、写真で並ぶ。<br>あの日の一皿も、すぐに見返せます。</p>
-      </div>
-      <div class="rec-media reveal d1">
-        <div class="rec-shots">
-          <div class="shot a"><div class="scr"><div class="chrome" aria-hidden="true"></div><div class="ph" style="--iw:720;--x:0;--y:120;--w:720;--h:1290"><img src="assets/images/mylist-ate-release2.jpg" alt="食べた店の写真が月ごとに3列で並ぶマイリスト" loading="lazy" decoding="async"></div></div></div>
-          <div class="shot b"><div class="scr"><div class="chrome" aria-hidden="true"></div><div class="ph" style="--iw:1206;--x:38;--y:200;--w:1130;--h:2160"><img src="assets/images/visit-history-20261023.webp" alt="1つの店の訪問履歴。訪問日ごとに食べたものと写真が並ぶ" loading="lazy" decoding="async"></div></div></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== UPDATES ===== -->
-<section class="sec" id="updates" aria-labelledby="upd-h">
-  <div class="wrap">
-    <div class="upd reveal">
-      <div class="upd-head">
-        <div><span class="eyebrow">What's new</span><h2 id="upd-h" class="h2">最新アップデート</h2></div>
-        <a href="updates.html" class="upd-all">すべての更新を見る →</a>
-      </div>
-      <div class="upd-list">
-        <a class="upd-item" href="updates.html#u20261017"><time datetime="2026-10-17">2026.10.17</time><span>「行きたい」から、今日行くお店を見つけやすくなりました</span></a>
-        <a class="upd-item" href="updates.html#u20261011"><time datetime="2026-10-11">2026.10.11</time><span>マップでのお店探しが、よりスムーズになりました</span></a>
-        <a class="upd-item" href="updates.html#u20261007"><time datetime="2026-10-07">2026.10.07</time><span>マップでお店の特徴がわかるようになりました</span></a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== FAQ ===== -->
-<section class="sec" id="faq" aria-labelledby="faq-h">
-  <div class="wrap">
-    <div class="reveal" style="text-align:center"><span class="eyebrow" style="justify-content:center">FAQ</span><h2 id="faq-h" class="h2">よくある質問</h2></div>
-    <div class="faq reveal d1">
-      <details><summary>利用は無料ですか？<span class="pm" aria-hidden="true">＋</span></summary><div>はい、無料でご利用いただけます。App Store / Google Play からインストールして、アカウント登録頂ければ、すぐに使い始められます。</div></details>
-      <details><summary>口コミを書く必要はありますか？<span class="pm" aria-hidden="true">＋</span></summary><div>ありません。食べたお店を選んで記録できます。写真・食べたもの・訪問日・コメントは任意なので、残したい項目だけ入力してください。</div></details>
-      <details><summary>コメントは他の人に公開されますか？<span class="pm" aria-hidden="true">＋</span></summary><div>コメントは非公開のメモで、あなたにしか見えません。感想や次に食べたいメニューなど、自分のために自由に残せます。</div></details>
-      <details><summary>対応エリアはどこですか？<span class="pm" aria-hidden="true">＋</span></summary><div>関東エリアの飲食店に対応しています。対応エリアは順次拡大予定です。</div></details>
-    </div>
-  </div>
-</section>
-
-<!-- ===== DOWNLOAD ===== -->
-<section class="sec" id="download" aria-labelledby="dl-h">
-  <div class="wrap">
-    <div class="dl reveal">
-      <span class="eyebrow" style="justify-content:center">Get started</span>
-      <h2 id="dl-h" class="h2"><span class="nb">今すぐ無料で</span><span class="nb">始める。</span></h2>
-      <div class="badges">
-        <a class="store-badge" href="https://apps.apple.com/jp/app/id6761677783" target="_blank" rel="noopener" aria-label="App Storeでダウンロード"><img src="assets/badge-appstore-trim.png" alt="App Store でダウンロード" width="160" height="48"></a>
-        <a class="store-badge" href="https://play.google.com/store/apps/details?id=jp.dishcover.app" target="_blank" rel="noopener" aria-label="Google Playで手に入れる"><img src="assets/badge-googleplay-trim.png" alt="Google Play で手に入れる" width="162" height="48"></a>
-      </div>
-      <div><span class="area"><b>対応エリア</b><span>関東エリアの飲食店に対応。順次拡大予定です。</span></span></div>
-      <div class="qr">
-        <div class="box"><img src="assets/qr-download.svg" alt="DishcoverをスマホでダウンロードするQRコード"></div>
-        <span>スマホでQRを読み取ってインストールできます。</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<footer>
-  <div class="wrap">
-    <div class="flinks"><a href="updates.html">更新情報</a><a href="terms.html">利用規約</a><a href="privacy.html">プライバシーポリシー</a></div>
-    <p class="copy">© 2026 Dishcover株式会社</p>
-  </div>
-</footer>
-
-<div class="mobile-cta">
-  <div class="badges">
-    <a class="store-badge" href="https://apps.apple.com/jp/app/id6761677783" target="_blank" rel="noopener" aria-label="App Storeでダウンロード"><img src="assets/badge-appstore-trim.png" alt="App Store でダウンロード" width="133" height="40"></a>
-    <a class="store-badge" href="https://play.google.com/store/apps/details?id=jp.dishcover.app" target="_blank" rel="noopener" aria-label="Google Playで手に入れる"><img src="assets/badge-googleplay-trim.png" alt="Google Play で手に入れる" width="135" height="40"></a>
-  </div>
-</div>
-
-<script>
-(function(){
-  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var els = document.querySelectorAll('.reveal');
-  if (reduce || !('IntersectionObserver' in window)) { els.forEach(function(e){e.classList.add('in');}); return; }
-  var io = new IntersectionObserver(function(entries){
-    entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
-  }, { threshold: 0.1, rootMargin: '0px 0px -6% 0px' });
-  els.forEach(function(e){ io.observe(e); });
-})();
-/* スマホ固定バー：ヒーローのストアバッジが画面外に出たときだけ表示 */
-(function(){
-  var bar = document.querySelector('.mobile-cta'), hero = document.querySelector('.hero-cta');
-  if (!bar) return;
-  if (!hero || !('IntersectionObserver' in window)) { bar.classList.add('show'); return; }
-  var io = new IntersectionObserver(function(entries){
-    var e = entries[entries.length - 1];
-    bar.classList.toggle('show', !e.isIntersecting);
-  }, { threshold: 0 });
-  io.observe(hero);
-})();
-/* ヒーロー：「あなたのお気に入り」カード → 1枚目の発見カードのラベル を点線でつなぐ */
-(function(){
-  var art = document.querySelector('.hero-art'), tk = document.querySelector('.fav-ticket'),
-      tg = document.getElementById('fav-target'), path = document.getElementById('fav-path'), dot = document.getElementById('fav-dot');
-  if (!art || !tk || !tg || !path) return;
-  function draw(){
-    var a = art.getBoundingClientRect(), t = tk.getBoundingClientRect(), g = tg.getBoundingClientRect();
-    var x1 = t.left + t.width * .5 - a.left, y1 = t.bottom - a.top - 2;
-    var x2 = g.left - a.left - 6, y2 = g.top + g.height * .5 - a.top;
-    if (x2 <= x1) { x1 = t.left + t.width * .3 - a.left; }
-    var c1y = y1 + (y2 - y1) * .6, c2y = y1 + (y2 - y1) * .4;
-    path.setAttribute('d', 'M' + x1 + ' ' + y1 + ' C' + x1 + ' ' + c1y + ' ' + x2 + ' ' + c2y + ' ' + x2 + ' ' + y2);
-    dot.setAttribute('cx', x2); dot.setAttribute('cy', y2);
-  }
-  draw();
-  window.addEventListener('resize', draw);
-  window.addEventListener('load', draw);
-  if (document.fonts && document.fonts.ready) document.fonts.ready.then(draw);
-})();
-</script>
-</body>
-</html>
+<a class="skip" href="#main">本文へ移動</a>
+<nav class="wrap nav" aria-label="メインナビゲーション"><a class="brand" href="./" aria-label="Dishcover トップ"><img src="assets/logo-icon.png" alt="" width="38" height="38">Dishcover</a><a class="nav-link" href="#how">使い方</a><a class="btn" href="#download">無料で始める <span aria-hidden="true">↗</span></a></nav>
+<main id="main">
+<header class="hero"><div class="wrap hero-grid">
+<div class="hero-text"><h1>食べたお店で、<br>自分だけの<br><span class="tier-word">Tier表</span>を。</h1><p class="hero-question">あなたなら、どこに置く？</p><p class="hero-copy">点数も口コミもいらない。<br>見比べて置くだけで、「好き」が一枚に。</p></div>
+<figure class="hero-visual"><img class="tier-hero-image" src="assets/images/tier-share-20261103.webp" alt="好きなお店Tierの例" width="920" height="1610" fetchpriority="high" decoding="async"></figure>
+<div class="hero-cta"><p class="cta-caption">まずは、好きなお店をひとつ記録しよう。</p><div class="badges" aria-label="無料ダウンロード"><a class="store-badge" data-placement="hero" href="https://apps.apple.com/jp/app/id6761677783" target="_blank" rel="noopener" aria-label="App Storeでダウンロード"><img src="assets/badge-appstore-trim.png" alt="App Storeでダウンロード" width="160" height="48"></a><a class="store-badge" data-placement="hero" href="https://play.google.com/store/apps/details?id=jp.dishcover.app" target="_blank" rel="noopener" aria-label="Google Playで手に入れる"><img src="assets/badge-googleplay-trim.png" alt="Google Playで手に入れる" width="162" height="48"></a></div><p class="area-note">iPhone / Android ・ 関東の飲食店に対応</p></div>
+</div></header>
+<section class="how-section wrap" id="how" aria-labelledby="how-title"><p class="section-label how-eyebrow">HOW IT WORKS</p><h2 id="how-title">使い方は、3ステップ。</h2><ol class="steps-grid">
+<li class="step-card"><div class="step-copy"><span class="step-label">STEP 1</span><h3>食べたら、記録する。</h3><p>写真を選ぶと、撮った場所からお店を候補に。お店を選んで、記録できます。</p></div><div class="step-media"><figure class="record-visual"><img class="record-actual-image" src="assets/images/record-review-20261103.webp" alt="写真を選び、撮影場所の近くのお店から選んで記録する画面" width="600" height="843" loading="lazy" decoding="async"></figure></div></li>
+<li class="step-card"><div class="step-copy"><span class="step-label">STEP 2</span><h3>見比べて、並べる。</h3><p>「あの店と、同じくらい好き。」<br>食べたお店を選んで、S〜Dのボタンで置いていきます。</p></div><div class="step-media"><figure class="phone-figure tier-decide-visual"><img class="tier-decide-image" src="assets/images/tier-decide-20261103.webp" alt="Tierを決める画面" width="700" height="1426" loading="lazy" decoding="async"></figure></div></li>
+<li class="step-card"><div class="step-copy"><span class="step-label">STEP 3</span><h3>あなたの好みを一枚に。</h3><p>「どんなお店が好き？」と聞かれても、Tier表を1枚見せれば伝わる。S〜Aだけ、S〜Bまでなど、好きな範囲を画像にして保存・共有できます。</p></div><div class="step-media"><figure class="tier-chat" aria-label="好みを聞かれて、Tier表の画像で返信するチャットの例"><p class="tier-chat-message" aria-label="相手からのメッセージ">どんなお店が好きなの？</p><div class="tier-chat-reply"><img class="tier-share-image" src="assets/images/tier-share-20261103.webp" alt="自分からの返信として共有した、好きなお店Tierの例" width="920" height="1610" loading="lazy" decoding="async"></div></figure></div></li>
+</ol></section>
+<section class="collection-section" aria-labelledby="collection-title"><div class="wrap feature collection-feature"><div class="feature-copy"><h2 id="collection-title">Tier表も、<br><span>食べた思い出も。</span></h2><p>記録したお店が、写真の一覧にもたまっていく。<br>あの日の一皿も、すぐに見返せます。</p></div><figure class="collection-visual"><div class="collection-phone"><div class="collection-crop"><img src="assets/images/mylist-ate-release2.jpg" alt="食べたお店が料理写真と店名で並び、訪問日や食べたメニューを見返せるマイリストの画面例" loading="lazy" decoding="async" width="720" height="1565"></div></div></figure></div></section>
+<aside class="map-note wrap" aria-label="その他の機能"><p><strong>「行きたい」の保存も、地図でのお店探しも。</strong><br>日々の外食に使える機能も揃っています。</p></aside>
+<section class="faq-section wrap" aria-labelledby="faq-title"><h2 id="faq-title">よくある質問</h2><div class="faq">
+<details><summary>Tier表とは何ですか？</summary><p>自分の食べたお店を、S・A・B・C・Dの5つのTierに分けて並べた表です。どのお店をどこに置くかは、あなたの自由。同じTierに置けるお店の数に制限はありません。</p></details>
+<details><summary>全部のお店を分類する必要がありますか？</summary><p>ありません。食べたお店は、まず未分類に入ります。好きなお店から少しずつ分類でき、迷うお店は未分類のまま残せます。</p></details>
+<details><summary>写真や口コミは必須ですか？</summary><p>どちらも必須ではありません。写真がないお店もTier表に入れられます。写真を残すと、食べた料理と一緒に振り返れます。</p></details>
+<details><summary>無料で使えますか？ 対応エリアは？</summary><p>無料でご利用いただけます。関東エリアの飲食店に対応しています。アプリをダウンロードして、アカウント登録後に使い始められます。</p></details>
+</div></section>
+<div class="updates-band"><section id="updates" class="updates-section wrap" aria-labelledby="updates-title"><div class="updates-heading"><h2 id="updates-title">最新アップデート</h2><a href="updates.html">すべての更新を見る <span aria-hidden="true">→</span></a></div><div class="updates-list"><a href="updates.html#u20261017"><time datetime="2026-10-17">2026.10.17</time><span>「行きたい」から、今日行くお店を見つけやすくなりました</span><b aria-hidden="true">→</b></a><a href="updates.html#u20261011"><time datetime="2026-10-11">2026.10.11</time><span>マップでのお店探しが、よりスムーズになりました</span><b aria-hidden="true">→</b></a><a href="updates.html#u20261007"><time datetime="2026-10-07">2026.10.07</time><span>マップでお店の特徴がわかるようになりました</span><b aria-hidden="true">→</b></a></div></section></div>
+<section id="download" class="download-section"><div class="wrap"><p class="section-label">Dishcover</p><h2>好きなお店から、<br>Tier表をつくろう。</h2><p>まずは、食べたお店をひとつ記録。</p><div class="badges" aria-label="無料ダウンロード"><a class="store-badge" data-placement="bottom" href="https://apps.apple.com/jp/app/id6761677783" target="_blank" rel="noopener" aria-label="App Storeでダウンロード"><img loading="lazy" src="assets/badge-appstore-trim.png" alt="App Storeでダウンロード" width="160" height="48"></a><a class="store-badge" data-placement="bottom" href="https://play.google.com/store/apps/details?id=jp.dishcover.app" target="_blank" rel="noopener" aria-label="Google Playで手に入れる"><img loading="lazy" src="assets/badge-googleplay-trim.png" alt="Google Playで手に入れる" width="162" height="48"></a></div><p class="area-note">無料 ・ iPhone / Android ・ 関東の飲食店に対応</p><div class="qr"><img loading="lazy" src="assets/qr-download.svg" width="100" height="100" alt="スマホでDishcoverをダウンロードするQRコード"><span>スマホで読み取って<br>ダウンロード</span></div></div></section>
+</main>
+<footer><div class="wrap"><a class="brand" href="./">Dishcover</a><div class="flinks"><a href="updates.html">更新情報</a><a href="terms.html">利用規約</a><a href="privacy.html">プライバシーポリシー</a></div><p class="copy">© 2026 Dishcover株式会社</p></div></footer>
+<div class="mobile-cta" aria-label="アプリをダウンロード"><div class="badges" aria-label="無料ダウンロード"><a class="store-badge" data-placement="sticky" href="https://apps.apple.com/jp/app/id6761677783" target="_blank" rel="noopener" aria-label="App Storeでダウンロード"><img loading="lazy" src="assets/badge-appstore-trim.png" alt="App Storeでダウンロード" width="160" height="48"></a><a class="store-badge" data-placement="sticky" href="https://play.google.com/store/apps/details?id=jp.dishcover.app" target="_blank" rel="noopener" aria-label="Google Playで手に入れる"><img loading="lazy" src="assets/badge-googleplay-trim.png" alt="Google Playで手に入れる" width="162" height="48"></a></div></div>
+<script src="assets/js/tier-lp.js"></script>
+</body></html>
